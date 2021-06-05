@@ -3,8 +3,9 @@ import groovy.json.JsonSlurperClassic
 def jsonParse(def json) {
     new groovy.json.JsonSlurperClassic().parseText(json)
 }
+properties([pipelineTriggers([githubPush()])])
 pipeline {
-  agent { label 'master' }
+  agent any
   environment {
     appName = "variable" 
   }
