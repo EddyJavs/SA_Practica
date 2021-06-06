@@ -15,7 +15,24 @@ pipeline {
      
       steps {
           script {			
+           sh "echo 'Se realizo un push en master'"
+        }
+      }
+    }
+    stage("comprobacion npm"){
+     
+      steps {
+          script {			
            sh "echo 'hola mundo'"
+           sh "npm --version"
+        }
+      }
+    }
+    stage("paso build"){
+     
+      steps {
+          script {			
+           sh "echo 'Construyendo ...'"
         }
       }
     }
