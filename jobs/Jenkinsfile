@@ -33,8 +33,6 @@ stage("Build"){
      
       steps {
           script {		
-          sh "ls"	
-           sh "git clone https://github.com/EddyJavs/SA_Practica.git'"
            sh "cd proyectosa"
            sh "npm install"
         }
