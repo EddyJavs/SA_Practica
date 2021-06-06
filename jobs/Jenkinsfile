@@ -23,9 +23,13 @@ pipeline {
     stage("comprobacion npm"){
      
       steps {
-          script {			
-           sh "echo 'hola mundo'"
-           sh "npm --version"
+          script {		
+            env.NODEJS_HOME = "${tool 'nodejs-10.15.3'}"
+          	env.PATH="${env.NODEJS_HOME}/bin:${env.PATH}"
+          	sh 'npm --version'	
+            sh "echo 'hola mundo'"
+            sh 'node -v'
+            sh "npm --version"
         }
       }
     }
