@@ -24,12 +24,12 @@ stage("comprobacion npm"){
 stage("Build"){
      
       steps {
-          script {
-           sh "ls"		
-           sh "cd proyectosa"
-           sh "ls"
-           sh "npm install"
+        dir('proyectosa') {
+          sh 'ls'
+          sh "pwd"
+          sh "npm install"
         }
+          
       }
     }
 stage("Test"){
