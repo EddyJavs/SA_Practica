@@ -9,6 +9,7 @@ pipeline {
   environment {
     appName = "variable" 
   }
+  tools {nodejs "NodeJSInstaller"}
   stages {
 
  stage("paso 1"){
@@ -23,10 +24,6 @@ stage("comprobacion npm"){
      
       steps {
           script {		
-            env.NODEJS_HOME = "${tool 'nodejs-16.2.0'}"
-          	env.PATH="${env.NODEJS_HOME}/bin:${env.PATH}"
-          	sh 'npm --version'	
-            sh "echo 'hola mundo'"
             sh 'node -v'
             sh "npm --version"
         }
