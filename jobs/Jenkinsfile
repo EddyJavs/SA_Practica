@@ -29,11 +29,21 @@ stage("comprobacion npm"){
         }
       }
     }
-stage("paso build"){
+stage("Build"){
      
       steps {
           script {			
-           sh "echo 'Construyendo ...'"
+           sh "git clone https://github.com/EddyJavs/SA_Practica.git'"
+           sh "cd proyectosa"
+           sh "npm install"
+        }
+      }
+    }
+stage("Test"){
+     
+      steps {
+          script {			
+           sh "npm run test"
         }
       }
     }
