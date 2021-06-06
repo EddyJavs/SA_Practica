@@ -19,11 +19,11 @@ pipeline {
         }
       }
     }
-    stage("comprobacion npm"){
+stage("comprobacion npm"){
      
       steps {
           script {		
-            env.NODEJS_HOME = "${tool 'nodejs-10.15.3'}"
+            env.NODEJS_HOME = "${tool 'nodejs-16.2.0'}"
           	env.PATH="${env.NODEJS_HOME}/bin:${env.PATH}"
           	sh 'npm --version'	
             sh "echo 'hola mundo'"
@@ -32,7 +32,7 @@ pipeline {
         }
       }
     }
-    stage("paso build"){
+stage("paso build"){
      
       steps {
           script {			
