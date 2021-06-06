@@ -6,7 +6,6 @@ def jsonParse(def json) {
 //properties([pipelineTriggers([githubPush()])])
 pipeline {
   agent any
-  tools {nodejs "latest"}
   environment {
     appName = "variable" 
   }
