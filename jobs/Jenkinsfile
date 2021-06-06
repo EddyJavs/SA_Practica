@@ -12,15 +12,7 @@ pipeline {
   tools {nodejs "NodeJSInstaller"}
   stages {
 
-stage("comprobacion npm"){
-     
-      steps {
-          script {		
-            sh 'node -v'
-            sh "npm --version"
-        }
-      }
-    }
+
 stage("Build"){
      
       steps {
@@ -36,7 +28,9 @@ stage("Test"){
      
       steps {
           dir('proyectosa') {
-          sh "npm test"
+          sh 'ls'
+          sh "pwd"
+          sh "npm run test"
         }
       }
     }
