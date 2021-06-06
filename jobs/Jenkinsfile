@@ -12,14 +12,6 @@ pipeline {
   tools {nodejs "NodeJSInstaller"}
   stages {
 
- stage("paso 1"){
-     
-      steps {
-          script {			
-           sh "echo 'Se realizo un push en master'"
-        }
-      }
-    }
 stage("comprobacion npm"){
      
       steps {
@@ -34,6 +26,7 @@ stage("Build"){
       steps {
           script {		
            sh "cd proyectosa"
+           sh "ls"
            sh "npm install"
         }
       }
