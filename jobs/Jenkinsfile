@@ -35,8 +35,8 @@ stage("Build"){
 stage("Test"){
      
       steps {
-          script {			
-           sh "npm test"
+          dir('proyectosa') {
+          sh "npm test"
         }
       }
     }
