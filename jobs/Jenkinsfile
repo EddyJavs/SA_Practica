@@ -38,7 +38,7 @@ stage("Deploy"){
      
       steps {
           dir('proyectosa') {
-          sh "npm start"
+          sh "npm run build"
         }
       }
     }
