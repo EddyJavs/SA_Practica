@@ -19,8 +19,6 @@ stage("Build"){
         dir('proyectosa') {
           sh 'ls'
           sh "pwd"
-          sh "rm -rf node_modules"
-          sh "npm cache clear --force"
           sh "npm install"
         }
           
@@ -36,10 +34,17 @@ stage("Test"){
         }
       }
     }
+stage("Deploy"){
+     
+      steps {
+          dir('proyectosa') {
+          sh "npm start"
+        }
+      }
+    }
   }
   post {
-      always {          
-          deleteDir()
+      always {        
            sh "echo 'fase always'"
       }
       success {
