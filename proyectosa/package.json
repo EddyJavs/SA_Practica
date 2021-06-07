@@ -6,7 +6,7 @@
     "start": "ng serve --host 0.0.0.0",
     "build": "ng build --prod",
     "test": "ng test",
-    "testci": "ng test --browser ChromeHeadlessCI --code-coverage=true --single-run=true",
+    "testci": "ng test --browser ChromeHeadless --watch=false",
     "lint": "ng lint",
     "e2e": "ng e2e",
     "test-puppeteer": "ng test --watch=false --source-map=false"
