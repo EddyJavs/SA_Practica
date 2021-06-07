@@ -15,15 +15,7 @@ module.exports = function (config) {
       require('karma-coverage'),
       require('@angular-devkit/build-angular/plugins/karma')
     ],
-    customLaunchers: {
-      ChromeHeadless: {
-        base: 'Chrome',
-        flags: ["--headless",
-        "--disable-gpu",
-        "--no-sandbox",
-        "--remote-debugging-port=9222"]
-      }
-    },
+    
     client: {
       /*jasmine: {
         // you can add configuration options for Jasmine here
@@ -52,7 +44,7 @@ module.exports = function (config) {
     colors: true,
     logLevel: config.LOG_INFO,
     autoWatch: true,
-    browsers: ['Chrome', 'ChromeHeadless'], 
+    browsers: [ 'ChromeHeadless'], 
     singleRun: false,
     restartOnFileChange: true,
     browserNoActivityTimeout: 60000
